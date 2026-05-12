@@ -1,0 +1,10 @@
+Classifying customer feedback
+Prompting Technique: Few Shot prompting
+
+
+Generating structured SQL queries
+Prompting Technique: Role based prompting
+
+
+Solving multi-step logical or mathematical problems
+Prompting Technique: Chain of Thought prompting

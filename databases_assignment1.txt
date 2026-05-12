@@ -1,0 +1,30 @@
+The role of data in training and improving AI models
+Modern systems such as ChatGPT, Claude, or Gemini are useful only because they sit on top of large, curated bodies of data and continuous new input. The instructor’s point was blunt: without data, there is nothing to learn from and nothing meaningful to return when a user asks a question.
+
+The need for databases in storing and organizing large volumes of data
+Training is the phase where a model absorbs examples (text, labels, structured records—depending on the system) and builds the internal patterns that later drive behavior. If the underlying storage is messy, duplicated, or wrong, those patterns inherit the same defects.
+
+Inference is what happens when you send a query to an already trained model and receive a response. Even though we do not retrain in that moment, inference still relies on data: at minimum the prompt, and often retrieved context, user history, or feature vectors pulled from storage. So training and inference are not independent stories; both need trustworthy, reachable information.
+
+The concept of relational databases and how they structure data
+A database is a base for data—a place intended for storing and working with information systematically.
+More formally, a database is an organized collection whose access is usually managed by software called a Database Management System (DBMS). 
+Relational databases — data organized in tables (relations); relationships expressed with keys; queried heavily with SQL. Examples from class: MySQL, PostgreSQL, SQLite, Microsoft SQL Server (MSSQL). 
+Non-relational databases — everything else purposely grouped under one umbrella: document stores, key-value systems, wide-column designs, graph databases, products such as MongoDB or DynamoDB, and more.
+
+The idea of tables and basic data modeling (rows, columns, schema)
+The memorable one-liner from class: relational databases store relations, and relations are tables. Each table normally represents one entity type (users, courses, videos, questions, …) rather than mixing unrelated realities in one wide grab bag.
+A row is one record (one student, one course offering, one scheduled class).
+A column is an attribute (name, email, duration, title).
+A table groups records of the same kind.
+Two different tables may both use a column named id or instructor_id—the table name provides context. Within a single table, column names must remain distinct.
+
+
+The significance of primary keys and foreign keys in establishing relationships between tables
+A primary key (PK) is a column or minimal set of columns that uniquely identifies each row in that table, and that must not be NULL. There is one primary key per table (possibly composite, i.e. multiple columns together). 
+A foreign key (FK) is a column in a child table that stores values matching the primary key of a parent table. “Foreign” signals that the value’s meaning is defined in another table—it encodes a relationship.
+Primary key and foreign key help maintain following relationships
+1) one to many
+2) many to one
+3) one to one
+4) may to many
